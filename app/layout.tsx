@@ -11,8 +11,8 @@ const matisseEB = localFont({
 })
 
 export const metadata = {
-  title: "NERV Terminal - Developer Portfolio",
-  description: "A portfolio website inspired by NERV from Evangelion"
+  title: "Raphael Boullay--Le Fur - NERV Insipired Portfolio",
+  description: "Raphael Boullay--Le Fur Developer Portfolio",
 }
 
 export default function RootLayout({
