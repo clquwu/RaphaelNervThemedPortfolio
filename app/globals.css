@@ -1,0 +1,408 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Enhanced NERV-inspired styles based on Evangelion typography */
+body {
+  background-color: #0a0a0f;
+  color: #e5e7eb;
+}
+
+/* === MATISSE FONT FAMILY (Primary Evangelion Font) === */
+/* Always white in Evangelion - used for titles, important text, and UI elements */
+.font-matisse {
+  font-family: var(--font-matisse), "Times New Roman", serif;
+  font-weight: bold;
+  color: #ffffff !important; /* Always white as per Evangelion canon */
+}
+
+.font-matisse-light {
+  font-family: var(--font-matisse), "Times New Roman", serif;
+  font-weight: normal;
+  color: #ffffff !important;
+}
+
+/* === HELVETICA (Technical/UI Font) === */
+.font-helvetica {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* === FUTURA (Scientific/Technical Elements) === */
+.font-futura {
+  font-family: Futura, "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* === EUROSTILE (High-tech/Military Elements) === */
+.font-eurostile {
+  font-family: "Eurostile Extended", "Arial Black", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* === MECHANICAL COMPRESSION (Key Evangelion Feature) === */
+/* Light compression - 90% width */
+.eva-compressed-light {
+  transform: scaleX(0.9);
+  transform-origin: left;
+}
+
+/* Standard compression - 80% width (most common) */
+.eva-compressed {
+  transform: scaleX(0.9);
+  transform-origin: left;
+}
+
+/* Heavy compression - 70% width (for dramatic effect) */
+.eva-compressed-heavy {
+  transform: scaleX(0.9);
+  transform-origin: left;
+}
+
+/* Extreme compression - 60% width (for special cases) */
+.eva-compressed-extreme {
+  transform: scaleX(0.9);
+  transform-origin: left;
+}
+
+/* Center-origin compression for centered text */
+.eva-compressed-center {
+  transform: scaleX(0.8);
+  transform-origin: center;
+}
+
+/* === TITLE CARD STYLES (Evangelion Episode Titles) === */
+.eva-title-card {
+  font-family: var(--font-matisse), "Times New Roman", serif;
+  font-weight: bold;
+  color: #ffffff !important;
+  transform: scaleX(0.7);
+  transform-origin: center;
+  letter-spacing: -0.02em;
+  text-align: center;
+  background-color: #000000;
+  padding: 2rem;
+  border: 2px solid #ffffff;
+}
+
+/* === MAIN TITLES === */
+.eva-main-title {
+  font-family: var(--font-matisse), "Times New Roman", serif;
+  font-weight: bold;
+  color: #ffffff !important;
+  transform: scaleX(0.75);
+  transform-origin: left;
+  letter-spacing: -0.01em;
+  line-height: 0.9;
+}
+
+/* === SUBTITLE STYLES === */
+.eva-subtitle {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transform: scaleX(0.9);
+  transform-origin: left;
+  color: #e5e7eb;
+}
+
+/* === NERV UI ELEMENTS === */
+.nerv-ui {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+}
+
+.nerv-ui-compressed {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  transform: scaleX(0.85);
+  transform-origin: left;
+}
+
+/* === TECHNICAL TEXT (Futura/Eurostile) === */
+.nerv-tech {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+}
+
+.nerv-tech-eurostile {
+  font-family: "Eurostile Extended", "Arial Black", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+}
+
+/* === FLASH TEXT (Black and White Text Flashes) === */
+.eva-flash-text {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #ffffff !important;
+  background-color: #000000;
+  padding: 0.4rem 0.8rem;
+  transform: scaleX(0.95);
+  transform-origin: center;
+  text-align: center;
+  border: 1px solid #ffffff;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* === SOUND ONLY STYLE === */
+.eva-sound-only {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 1rem;
+  text-align: center;
+  border: 2px solid #ffffff;
+}
+
+/* === ANGULAR BRACKETS (Common in Evangelion UI) === */
+.eva-brackets::before {
+  content: "< ";
+}
+.eva-brackets::after {
+  content: " >";
+}
+
+/* === MONO DISPLAY (For technical readouts) === */
+.eva-mono {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* === STENCIL EFFECT (For military/industrial elements) === */
+.eva-stencil {
+  font-family: "Impact", "Arial Black", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-shadow: 
+    1px 1px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000;
+}
+
+/* === ENHANCED SCROLLBAR === */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(26, 10, 10, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(230, 0, 18, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(230, 0, 18, 0.7);
+}
+
+/* === ENHANCED ANIMATIONS === */
+@keyframes titleFlash {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes textCompression {
+  0% { transform: scaleX(1); }
+  100% { transform: scaleX(0.8); }
+}
+
+@keyframes nervPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.title-card {
+  animation: titleFlash 4s ease-in-out;
+}
+
+.eva-compression-animate {
+  animation: textCompression 0.3s ease-out forwards;
+}
+
+.nerv-pulse {
+  animation: nervPulse 2s infinite;
+}
+
+/* === SPECIFIC EVANGELION TYPOGRAPHY COMBINATIONS === */
+/* For episode-style titles */
+.eva-episode-title {
+  font-family: var(--font-matisse), "Times New Roman", serif;
+  font-weight: bold;
+  color: #ffffff !important;
+  transform: scaleX(0.7);
+  transform-origin: center;
+  font-size: 3rem;
+  line-height: 0.9;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+/* For NERV logo text */
+.eva-nerv-logo {
+  font-family: var(--font-matisse), "Times New Roman", serif;
+  font-weight: bold;
+  color: #e60012 !important;
+  transform: scaleX(0.8);
+  transform-origin: left;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* For project/section headers */
+.eva-section-header {
+  font-family: var(--font-matisse), "Times New Roman", serif;
+  font-weight: bold;
+  color: #ffffff !important;
+  transform: scaleX(0.75);
+  transform-origin: left;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* For body text in Matisse (rare, but sometimes used) */
+.eva-body-text {
+  font-family: var(--font-matisse), "Times New Roman", serif;
+  font-weight: normal;
+  color: #ffffff !important;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.nerv-email-lowercase {
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+/* === RESPONSIVE CONSIDERATIONS === */
+@media (max-width: 768px) {
+  .eva-compressed,
+  .eva-compressed-heavy,
+  .eva-compressed-extreme,
+  .eva-main-title,
+  .eva-section-header {
+    transform: scaleX(0.85); /* Less compression on mobile for readability */
+  }
+  
+  .eva-episode-title {
+    font-size: 2rem;
+    transform: scaleX(0.8);
+  }
+}
+
+/* === UTILITY CLASSES FOR COMMON COMBINATIONS === */
+.eva-title-primary {
+  @apply font-matisse eva-compressed text-white text-4xl font-bold uppercase tracking-wider;
+}
+
+.eva-title-secondary {
+  @apply font-helvetica eva-compressed-light text-nerv-light text-xl font-bold uppercase tracking-widest;
+}
+
+.eva-ui-text {
+  @apply font-helvetica text-nerv-light text-sm font-bold uppercase tracking-wide;
+}
+
+.eva-tech-text {
+  @apply font-futura text-nerv-orange text-xs font-bold uppercase tracking-widest;
+}
