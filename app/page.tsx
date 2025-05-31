@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Terminal, Code, Github, Cpu, FileCode, Hexagon } from "lucide-react"
+import { Terminal, Code, Github, Cpu, FileCode, Hexagon, Linkedin } from "lucide-react" // Added Linkedin
 import { Button } from "@/components/ui/button"
 import NervTerminal from "@/components/nerv-terminal"
 import NervLogo from "@/components/nerv-logo"
@@ -58,7 +58,7 @@ export default function Portfolio() {
       featured: true,
     },
     {
-      id: "PROJECT-02", 
+      id: "PROJECT-02",
       title: "Kibo Anime",
       description:
         "Innovative Android streaming application integrating multiple anime sources with a custom video player. Solo-developed with Kotlin and Jetpack Compose, featuring intelligent notifications, integrated downloads, TV casting, and recommendation system with Firebase real-time data management.",
@@ -184,7 +184,7 @@ export default function Portfolio() {
                     <span className="text-nerv-red">WEB DEVELOPER</span>
                   </h1>
                   <p className="text-xl text-nerv-light/80 max-w-lg eva-subtitle">
-                    First-year Computer Science student at University of Bordeaux, passionate about software development. 
+                    First-year Computer Science student at University of Bordeaux, passionate about software development.
                     Strong skills in Android mobile development (Kotlin/Jetpack Compose) and web development (React/Next.js).
                   </p>
                 </div>
@@ -276,19 +276,19 @@ export default function Portfolio() {
                 <h3 className="eva-section-header text-xl text-white mb-4">DEVELOPER PROFILE</h3>
                 <div className="space-y-4 text-nerv-light/80 eva-body-text">
                   <p>
-                    First-year Computer Science student at University of Bordeaux, passionate about software development. 
-                    Strong expertise in Android mobile development (Kotlin/Jetpack Compose) and web development (React/Next.js), 
-                    demonstrated through innovative applications like Kibo Anime (streaming), Scoreflow (AI sheet music conversion), 
+                    First-year Computer Science student at University of Bordeaux, passionate about software development.
+                    Strong expertise in Android mobile development (Kotlin/Jetpack Compose) and web development (React/Next.js),
+                    demonstrated through innovative applications like Kibo Anime (streaming), Scoreflow (AI sheet music conversion),
                     and PianoSync (MIDI piano learning app).
                   </p>
                   <p>
-                    Proactive learner with experience in full-stack development, from mobile applications with advanced features 
-                    like TV casting and intelligent notifications, to AI-powered web platforms. Skilled in modern development 
+                    Proactive learner with experience in full-stack development, from mobile applications with advanced features
+                    like TV casting and intelligent notifications, to AI-powered web platforms. Skilled in modern development
                     practices including Firebase integration, real-time data management, and user experience optimization.
                   </p>
                   <p>
-                    Currently pursuing fundamental programming concepts, object-oriented programming, data structures, 
-                    and project management methodologies while applying knowledge in practical group projects simulating 
+                    Currently pursuing fundamental programming concepts, object-oriented programming, data structures,
+                    and project management methodologies while applying knowledge in practical group projects simulating
                     professional development environments.
                   </p>
                 </div>
@@ -311,7 +311,7 @@ export default function Portfolio() {
                         )}
                       </div>
                     </div>
-                    
+
                     <div>
                       <h5 className="text-sm text-nerv-light/70 mb-2 nerv-ui">WEB DEVELOPMENT</h5>
                       <div className="flex flex-wrap gap-2">
@@ -414,7 +414,26 @@ export default function Portfolio() {
                     </div>
                     <div className="flex items-center space-x-3">
                       <Github className="w-5 h-5 text-nerv-red" />
-                      <span className="text-nerv-light nerv-email-lowercase">github.com/clquwu</span>
+                      <a
+                        href="https://github.com/clquwu"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-nerv-light nerv-email-lowercase hover:text-nerv-red transition-colors"
+                      >
+                        github.com/clquwu
+                      </a>
+                    </div>
+                    {/* Added LinkedIn */}
+                    <div className="flex items-center space-x-3">
+                      <Linkedin className="w-5 h-5 text-nerv-red" />
+                       <a
+                        href="https://www.linkedin.com/in/raphael-boulla-le-fur-28aa41368"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-nerv-light nerv-email-lowercase hover:text-nerv-red transition-colors"
+                      >
+                        linkedin.com/in/raphael-boulla-le-fur
+                      </a>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Hexagon className="w-5 h-5 text-nerv-red" />
@@ -524,7 +543,7 @@ export default function Portfolio() {
               </div>
             </div>
           </section>
-          
+
           <section id="magi" className="mb-20">
             <div className="flex items-center mb-12">
               <div className="w-8 h-8 bg-nerv-red/20 border border-nerv-red/40 rounded-full flex items-center justify-center mr-3">
