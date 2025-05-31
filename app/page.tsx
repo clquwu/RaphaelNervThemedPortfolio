@@ -427,7 +427,7 @@ export default function Portfolio() {
                     <div className="flex items-center space-x-3">
                       <Linkedin className="w-5 h-5 text-nerv-red" />
                        <a
-                        href="www.linkedin.com/in/raphael-boullay-le-fur-"
+                        href="https://www.linkedin.com/in/raphael-boullay-le-fur-"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-nerv-light nerv-email-lowercase hover:text-nerv-red transition-colors"
