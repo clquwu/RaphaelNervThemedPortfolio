@@ -22,20 +22,34 @@ export default function Portfolio() {
     e.preventDefault()
     setSending(true)
     setSent(null)
+
     try {
-      await fetch("https://discord.com/api/webhooks/1196822282048393236/KPA-u51PRYTubxTcmADiyh7RrqV_uis6Sraea2jFAzq59jc_DCVMnHXi3jberm4fw-wl", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify({
-          content: `**New Portfolio Contact**\n**Name:** ${contact.name}\n**Email:** ${contact.email}\n**Message:**\n${contact.message}`,
+          name: contact.name,
+          email: contact.email,
+          message: contact.message,
         }),
       })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message')
+      }
+
       setSent("success")
       setContact({ name: "", email: "", message: "" })
-    } catch {
+    } catch (error) {
+      console.error('Contact form error:', error)
       setSent("error")
+    } finally {
+      setSending(false)
     }
-    setSending(false)
   }
 
   useEffect(() => {
