@@ -124,7 +124,7 @@ export default function Portfolio() {
       name: "PianoSync",
       description: "Android piano learning app with MIDI support and interactive falling notes.",
       language: "Kotlin",
-      stars: 7,
+      stars: 8,
       forks: 0,
       url: "https://github.com/clquwu/PianoSync",
     },
