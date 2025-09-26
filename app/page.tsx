@@ -17,6 +17,7 @@ export default function Portfolio() {
   const [contact, setContact] = useState({ name: "", email: "", message: "" })
   const [sending, setSending] = useState(false)
   const [sent, setSent] = useState<null | "success" | "error">(null)
+  const [githubStars, setGithubStars] = useState<Record<string, { stars: number; forks: number }> | null>(null)
 
   async function handleContactSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -59,6 +60,28 @@ export default function Portfolio() {
     }, 2000)
   }, [])
 
+  useEffect(() => {
+    // Fetch GitHub stars data
+    const fetchGitHubData = async () => {
+      try {
+        const response = await fetch('/api/github-stars')
+        if (response.ok) {
+          const data = await response.json()
+          setGithubStars(data)
+        }
+      } catch (error) {
+        console.error('Failed to fetch GitHub stars:', error)
+      }
+    }
+
+    fetchGitHubData()
+
+    // Set up interval to fetch every hour
+    const interval = setInterval(fetchGitHubData, 60 * 60 * 1000)
+
+    return () => clearInterval(interval)
+  }, [])
+
   // Main featured projects
   const mainProjects = [
     {
@@ -73,12 +96,12 @@ export default function Portfolio() {
     },
     {
       id: "PROJECT-02",
-      title: "Kibo Anime",
+      title: "Cosmos",
       description:
-        "Innovative Android streaming application integrating multiple anime sources with a custom video player. Solo-developed with Kotlin and Jetpack Compose, featuring intelligent notifications, integrated downloads, TV casting, and recommendation system with Firebase real-time data management.",
-      technologies: ["Kotlin", "Jetpack Compose", "Firebase", "ExoPlayer"],
-      image: "/bannerkibo.png",
-      demo: "https://www.kiboanime.app/",
+        "High-quality music player that supports both iCloud Drive synchronization and local storage, giving users flexibility in how they manage their music. The app is built and designed for the iOS and Apple ecosystem with advanced audio features and seamless cloud integration.",
+      technologies: ["Swift", "SwiftUI", "iCloud Drive", "Core Audio"],
+      image: "/cosmosbanner.png",
+      demo: "https://github.com/clquwu/Cosmos-Music-Player",
       featured: true,
     },
     {
@@ -105,16 +128,16 @@ export default function Portfolio() {
       url: "https://github.com/clquwu/FtpVideoCompressor",
     },
     {
-      name: "Sibnet Url To Mp4",
-      description: "Convert Sibnet URLs to direct MP4 links for easy video access.",
-      language: "JavaScript",
-      stars: 1,
-      forks: 1,
-      url: "https://github.com/clquwu/sibneturltomp4",
+      name: "Cosmos Music Player",
+      description: "High-quality music player supporting iCloud Drive synchronization and local storage for iOS.",
+      language: "Swift",
+      stars: githubStars?.["clquwu/Cosmos-Music-Player"]?.stars ?? 0,
+      forks: githubStars?.["clquwu/Cosmos-Music-Player"]?.forks ?? 0,
+      url: "https://github.com/clquwu/Cosmos-Music-Player",
     },
     {
-      name: "Python Fast Api Gptq Models",
-      description: "FastAPI server for serving GPTQ quantized models with GPU support.",
+      name: "Python FastAPI GPTQ Models",
+      description: "FastAPI server for serving GPTQ quantized models with GPU support and optimized inference.",
       language: "Python",
       stars: 0,
       forks: 0,
@@ -124,8 +147,8 @@ export default function Portfolio() {
       name: "PianoSync",
       description: "Android piano learning app with MIDI support and interactive falling notes.",
       language: "Kotlin",
-      stars: 8,
-      forks: 0,
+      stars: githubStars?.["clquwu/PianoSync"]?.stars ?? 8,
+      forks: githubStars?.["clquwu/PianoSync"]?.forks ?? 0,
       url: "https://github.com/clquwu/PianoSync",
     },
   ]
@@ -292,7 +315,7 @@ export default function Portfolio() {
                   <p>
                     First-year Computer Science student at University of Bordeaux, passionate about software development.
                     Strong expertise in Android mobile development (Kotlin/Jetpack Compose) and web development (React/Next.js),
-                    demonstrated through innovative applications like Kibo Anime (streaming), Scoreflow (AI sheet music conversion),
+                    demonstrated through innovative applications like Cosmos (music player), Scoreflow (AI sheet music conversion),
                     and PianoSync (MIDI piano learning app).
                   </p>
                   <p>
@@ -529,7 +552,7 @@ export default function Portfolio() {
                   <div>{">"} Student ID: RBOULLAY-LF</div>
                   <div>{">"} Status: First Year Computer Science</div>
                   <div>{">"} Specialization: Mobile & Web Development</div>
-                  <div>{">"} Current Projects: Scoreflow, Kibo Anime, PianoSync</div>
+                  <div>{">"} Current Projects: Scoreflow, Cosmos, PianoSync</div>
                   <div>{">"} Available for collaboration and internships</div>
                   <div>{">"} Response time: 24-48 hours</div>
                   <div className="mt-4 mb-2">{">"} _</div>
