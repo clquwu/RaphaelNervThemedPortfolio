@@ -136,12 +136,12 @@ export default function Portfolio() {
       url: "https://github.com/clquwu/Cosmos-Music-Player",
     },
     {
-      name: "Python FastAPI GPTQ Models",
-      description: "FastAPI server for serving GPTQ quantized models with GPU support and optimized inference.",
-      language: "Python",
+      name: "Kibo Anime",
+      description: "Innovative Android streaming application integrating multiple anime sources with custom video player.",
+      language: "Kotlin",
       stars: 0,
       forks: 0,
-      url: "https://github.com/clquwu/Python-FastApi-Dolphin2.6-GPTQ",
+      url: "https://www.kiboanime.app/",
     },
     {
       name: "PianoSync",
