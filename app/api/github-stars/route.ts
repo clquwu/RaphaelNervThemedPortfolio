@@ -15,7 +15,7 @@ let cache: CachedData | null = null
 const CACHE_DURATION = 60 * 60 * 1000 // 1 hour in milliseconds
 
 const REPOS = [
-  'clquwu/PianoSync',
+  'Kotatsu-Redo/Kotatsu-Redo',
   'clquwu/Cosmos-Music-Player'
 ]
 
@@ -41,16 +41,16 @@ async function fetchGitHubStars(): Promise<Record<string, { stars: number; forks
         console.error(`Failed to fetch ${repo}: ${response.status}`)
         // Fallback to existing values
         results[repo] = {
-          stars: repo.includes('PianoSync') ? 8 : 0,
-          forks: repo.includes('PianoSync') ? 0 : 0
+          stars: repo.includes('Kotatsu-Redo') ? 0 : 0,
+          forks: repo.includes('Kotatsu-Redo') ? 0 : 0
         }
       }
     } catch (error) {
       console.error(`Error fetching ${repo}:`, error)
       // Fallback to existing values
       results[repo] = {
-        stars: repo.includes('PianoSync') ? 8 : 0,
-        forks: repo.includes('PianoSync') ? 0 : 0
+        stars: repo.includes('Kotatsu-Redo') ? 0 : 0,
+        forks: repo.includes('Kotatsu-Redo') ? 0 : 0
       }
     }
   }

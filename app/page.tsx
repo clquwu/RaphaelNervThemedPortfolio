@@ -106,13 +106,13 @@ export default function Portfolio() {
     },
     {
       id: "PROJECT-03",
-      title: "PianoSync",
+      title: "Kotatsu-Redo",
       description:
-        "Interactive Android piano learning application that allows playing any MIDI file with your piano. Features falling notes towards a virtual keyboard and innovative functionalities for an immersive piano learning experience. Future iOS version planned.",
-      technologies: ["Android", "Kotlin", "MIDI Processing", "Interactive UI"],
-      image: "/pianosyncbanner.png",
-      github: "https://github.com/clquwu/PianoSync",
-      demo: "https://github.com/clquwu/PianoSync",
+        "Kotatsu-Redo is a free and open-source manga reader for Android with built-in online content sources. It supports searching by name and genre filters, favorites with user-defined categories, reading history, bookmarks, downloads for offline reading (CBZ supported), and integration with tracking services. Lightweight, Material You UI and supports older devices (Android 6.0+).",
+      technologies: ["Android", "Kotlin", "Material You", "Manga Sources"],
+      image: "/kotatsu-redo-banner.png",
+      github: "https://github.com/Kotatsu-Redo/Kotatsu-Redo",
+      demo: "https://github.com/Kotatsu-Redo/Kotatsu-Redo",
       featured: true,
     },
   ]
@@ -144,12 +144,12 @@ export default function Portfolio() {
       url: "https://www.kiboanime.app/",
     },
     {
-      name: "PianoSync",
-      description: "Android piano learning app with MIDI support and interactive falling notes.",
+      name: "Kotatsu-Redo",
+      description: "Free, open-source Android manga reader with many online content sources and offline download support.",
       language: "Kotlin",
-      stars: githubStars?.["clquwu/PianoSync"]?.stars ?? 8,
-      forks: githubStars?.["clquwu/PianoSync"]?.forks ?? 0,
-      url: "https://github.com/clquwu/PianoSync",
+      stars: githubStars?.["Kotatsu-Redo/Kotatsu-Redo"]?.stars ?? 0,
+      forks: githubStars?.["Kotatsu-Redo/Kotatsu-Redo"]?.forks ?? 0,
+      url: "https://github.com/Kotatsu-Redo/Kotatsu-Redo",
     },
   ]
 
@@ -316,7 +316,7 @@ export default function Portfolio() {
                     First-year Computer Science student at University of Bordeaux, passionate about software development.
                     Strong expertise in Android mobile development (Kotlin/Jetpack Compose) and web development (React/Next.js),
                     demonstrated through innovative applications like Cosmos (music player), Scoreflow (AI sheet music conversion),
-                    and PianoSync (MIDI piano learning app).
+                    and Kotatsu-Redo (open-source Android manga reader).
                   </p>
                   <p>
                     Proactive learner with experience in full-stack development, from mobile applications with advanced features
@@ -552,7 +552,7 @@ export default function Portfolio() {
                   <div>{">"} Student ID: RBOULLAY-LF</div>
                   <div>{">"} Status: First Year Computer Science</div>
                   <div>{">"} Specialization: Mobile & Web Development</div>
-                  <div>{">"} Current Projects: Scoreflow, Cosmos, PianoSync</div>
+                  <div>{">"} Current Projects: Scoreflow, Cosmos, Kotatsu-Redo</div>
                   <div>{">"} Available for collaboration and internships</div>
                   <div>{">"} Response time: 24-48 hours</div>
                   <div className="mt-4 mb-2">{">"} _</div>
