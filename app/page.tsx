@@ -110,7 +110,7 @@ export default function Portfolio() {
       description:
         "Kotatsu-Redo is a free and open-source manga reader for Android with built-in online content sources. It supports searching by name and genre filters, favorites with user-defined categories, reading history, bookmarks, downloads for offline reading (CBZ supported), and integration with tracking services. Lightweight, Material You UI and supports older devices (Android 6.0+).",
       technologies: ["Android", "Kotlin", "Material You", "Manga Sources"],
-      image: "/kotatsu-redo-banner.png",
+  image: "/bannerkotatsu.png",
       github: "https://github.com/Kotatsu-Redo/Kotatsu-Redo",
       demo: "https://github.com/Kotatsu-Redo/Kotatsu-Redo",
       featured: true,
