@@ -120,12 +120,13 @@ export default function Portfolio() {
   // Additional GitHub projects (keeping some examples)
   const githubProjects = [
     {
-      name: "Ftp Video Compressor",
-      description: "Connect to an FTP server and compress videos using FFmpeg usiong VMAF optimized settings and AV1 codec.",
-      language: "Python",
-      stars: 0,
-      forks: 0,
-      url: "https://github.com/clquwu/FtpVideoCompressor",
+      name: "PianoSync",
+      description:
+        "Innovative Android app that revolutionizes piano learning with interactive MIDI playback, visual guidance, and synchronized key lighting.",
+      language: "Kotlin",
+      stars: githubStars?.["clquwu/PianoSync"]?.stars ?? 0,
+      forks: githubStars?.["clquwu/PianoSync"]?.forks ?? 0,
+      url: "https://github.com/clquwu/PianoSync",
     },
     {
       name: "Cosmos Music Player",
