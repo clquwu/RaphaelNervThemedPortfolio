@@ -16,8 +16,15 @@ const CACHE_DURATION = 60 * 60 * 1000 // 1 hour in milliseconds
 
 const REPOS = [
   'Kotatsu-Redo/Kotatsu-Redo',
-  'clquwu/Cosmos-Music-Player'
+  'clquwu/Cosmos-Music-Player',
+  'clquwu/PianoSync'
 ]
+
+const DEFAULT_STATS: Record<string, { stars: number; forks: number }> = {
+  'Kotatsu-Redo/Kotatsu-Redo': { stars: 96, forks: 8 },
+  'clquwu/Cosmos-Music-Player': { stars: 26, forks: 0 },
+  'clquwu/PianoSync': { stars: 0, forks: 0 }
+}
 
 async function fetchGitHubStars(): Promise<Record<string, { stars: number; forks: number }>> {
   const results: Record<string, { stars: number; forks: number }> = {}
@@ -39,19 +46,13 @@ async function fetchGitHubStars(): Promise<Record<string, { stars: number; forks
         }
       } else {
         console.error(`Failed to fetch ${repo}: ${response.status}`)
-        // Fallback to existing values
-        results[repo] = {
-          stars: repo.includes('Kotatsu-Redo') ? 0 : 0,
-          forks: repo.includes('Kotatsu-Redo') ? 0 : 0
-        }
+        // Fallback to last known static values
+        results[repo] = DEFAULT_STATS[repo] ?? { stars: 0, forks: 0 }
       }
     } catch (error) {
       console.error(`Error fetching ${repo}:`, error)
-      // Fallback to existing values
-      results[repo] = {
-        stars: repo.includes('Kotatsu-Redo') ? 0 : 0,
-        forks: repo.includes('Kotatsu-Redo') ? 0 : 0
-      }
+      // Fallback to last known static values
+      results[repo] = DEFAULT_STATS[repo] ?? { stars: 0, forks: 0 }
     }
   }
 
