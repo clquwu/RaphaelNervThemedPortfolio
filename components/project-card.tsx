@@ -24,7 +24,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <div className="bg-nerv-dark border border-nerv-red/30 rounded-md overflow-hidden group hover:border-nerv-red transition-colors">
       <div className={`relative ${isNotesProject ? "bg-white" : ""}`}>
-        <div className={`absolute inset-0 z-10 ${isNotesProject ? "" : "bg-gradient-to-t from-nerv-black to-transparent"}`}></div>
         <Image
           src={project.image || "/placeholder.svg"}
           alt={project.title}
