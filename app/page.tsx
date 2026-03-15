@@ -90,7 +90,7 @@ export default function Portfolio() {
       description:
         "Training pipeline for Clarity-OMR, a 4-stage optical music recognition system that processes full-page scores through layout detection, staff-level transformer decoding, constrained grammar-based assembly, and MusicXML serialization for robust, structured transcription.",
       technologies: ["Python", "PyTorch", "YOLOv8", "Transformer", "MusicXML"],
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/notes.svg",
       github: "https://github.com/clquwu/Clarity-OMR-Train",
       demo: "https://github.com/clquwu/Clarity-OMR-Train",
       featured: true,
