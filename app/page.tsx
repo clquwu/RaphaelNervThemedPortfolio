@@ -86,12 +86,13 @@ export default function Portfolio() {
   const mainProjects = [
     {
       id: "PROJECT-01",
-      title: "Scoreflow",
+      title: "Clarity-OMR-Train",
       description:
-        "Innovative AI-powered web platform that transforms musical scores into MIDI and MusicXML formats. Developed with React and Next.js, this application revolutionizes sheet music digitization by offering precise and fast conversion using advanced AI algorithms for musical notation recognition.",
-      technologies: ["React", "Next.js", "AI/ML", "JavaScript"],
-      image: "/scroreflowbanner.png",
-      demo: "https://scoreflow.app/",
+        "Training pipeline for Clarity-OMR, a 4-stage optical music recognition system that processes full-page scores through layout detection, staff-level transformer decoding, constrained grammar-based assembly, and MusicXML serialization for robust, structured transcription.",
+      technologies: ["Python", "PyTorch", "YOLOv8", "Transformer", "MusicXML"],
+      image: "/placeholder.svg?height=400&width=600",
+      github: "https://github.com/clquwu/Clarity-OMR-Train",
+      demo: "https://github.com/clquwu/Clarity-OMR-Train",
       featured: true,
     },
     {
@@ -129,12 +130,12 @@ export default function Portfolio() {
       url: "https://github.com/clquwu/PianoSync",
     },
     {
-      name: "Cosmos Music Player",
-      description: "High-quality music player supporting iCloud Drive synchronization and local storage for iOS.",
-      language: "Swift",
-      stars: githubStars?.["clquwu/Cosmos-Music-Player"]?.stars ?? 0,
-      forks: githubStars?.["clquwu/Cosmos-Music-Player"]?.forks ?? 0,
-      url: "https://github.com/clquwu/Cosmos-Music-Player",
+      name: "Scoreflow",
+      description: "AI-powered score conversion platform that transforms sheet music into MIDI and MusicXML.",
+      language: "Web",
+      stars: 0,
+      forks: 0,
+      url: "https://scoreflow.app/",
     },
     {
       name: "Kibo Anime",
