@@ -19,16 +19,18 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
+  const isNotesProject = project.image === "/notes.svg"
+
   return (
     <div className="bg-nerv-dark border border-nerv-red/30 rounded-md overflow-hidden group hover:border-nerv-red transition-colors">
-      <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-t from-nerv-black to-transparent z-10"></div>
+      <div className={`relative ${isNotesProject ? "bg-white" : ""}`}>
+        <div className={`absolute inset-0 z-10 ${isNotesProject ? "" : "bg-gradient-to-t from-nerv-black to-transparent"}`}></div>
         <Image
           src={project.image || "/placeholder.svg"}
           alt={project.title}
           width={500}
           height={300}
-          className="w-full h-48 object-cover"
+          className={`w-full h-48 ${isNotesProject ? "bg-white object-contain" : "object-cover"}`}
         />
         <div className="absolute top-3 left-3 bg-nerv-black/80 px-2 py-1 rounded z-20 border border-nerv-red/30">
           <div className="text-xs text-nerv-red font-futura">{project.id}</div>
