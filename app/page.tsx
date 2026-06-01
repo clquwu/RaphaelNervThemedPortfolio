@@ -446,12 +446,6 @@ export default function Portfolio() {
                   <h3 className="eva-section-header text-xl text-white mb-4">CONTACT PROTOCOLS</h3>
                   <div className="space-y-4 nerv-ui">
                     <div className="flex items-center space-x-3">
-                      <Terminal className="w-5 h-5 text-nerv-red" />
-                      <span className="text-nerv-light nerv-email-lowercase">
-                        {"raphaelboullaylefur@proton.me".toLowerCase()}
-                      </span>
-                    </div>
-                    <div className="flex items-center space-x-3">
                       <Github className="w-5 h-5 text-nerv-red" />
                       <a
                         href="https://github.com/clquwu"
