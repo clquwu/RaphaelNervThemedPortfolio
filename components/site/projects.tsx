@@ -114,13 +114,16 @@ function AppCard({ project, stats }: { project: Featured; stats?: RepoStats }) {
       <p className="mt-5 max-w-[48ch] text-nerv-mute">{project.summary}</p>
 
       {project.screens && (
-        <div data-reveal="screens" className="mt-8 grid grid-cols-3 gap-2 sm:gap-3">
+        <div data-reveal="screens" className="mt-8 grid grid-cols-3">
           {project.screens.map((src, i) => (
-            // The frame is always there; the picture slides up into it.
-            <div key={src} className="shot overflow-hidden border border-nerv-line bg-nerv-black" style={{ ["--i" as string]: i }}>
-              {/* Loaded eagerly (about 25 KB each) so a picture never reveals before it has arrived. */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={src} alt="" width={400} height={640} decoding="async" fetchPriority="low" className="block aspect-[5/8] w-full object-cover" />
+            // .shot is the hover target (it also covers the gutter, so the hover never drops between
+            // screenshots); .shot-frame is the visible frame the picture slides up into.
+            <div key={src} className="shot" style={{ ["--i" as string]: i }}>
+              <div className="shot-frame overflow-hidden border border-nerv-line bg-nerv-black">
+                {/* Loaded eagerly (about 25 KB each) so a picture never reveals before it has arrived. */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={src} alt="" width={400} height={640} decoding="async" fetchPriority="low" className="block aspect-[5/8] w-full object-cover" />
+              </div>
             </div>
           ))}
         </div>

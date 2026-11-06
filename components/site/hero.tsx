@@ -4,9 +4,7 @@ export default function Hero() {
   return (
     <section id="top">
       <div className="mx-auto flex min-h-[calc(100svh-4rem)] max-w-[104rem] flex-col justify-center px-5 pb-12 pt-12 sm:px-8 lg:px-10 lg:pb-16">
-        <p className="label text-nerv-red">Mobile &amp; web developer</p>
-
-        <h1 className="mt-5 lg:mt-6">
+        <h1>
           <span className="sr-only">Raphael Boullay--Le Fur</span>
           <TitleBlock lines={NARROW} uid="tn" className="block h-auto w-full max-w-[26rem] sm:hidden" />
           {/* Width is capped by viewport height so the buttons stay above the fold on short screens. */}
